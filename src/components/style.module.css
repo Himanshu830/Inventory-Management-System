@@ -1,0 +1,33 @@
+.customTable {
+    background-color: #f8f9fa; /* Light gray background for the table */
+    color: #343a40; /* Dark text color */
+    border: 2px solid #ced4da; /* Border color */
+  }
+  
+  .customTable thead {
+    background-color: #343a40; /* Dark background for the header */
+    color: white; /* White text color for the header */
+  }
+  
+  .customTable tbody tr {
+    background-color: #ffffff; /* Default background for table rows */
+  }
+  
+  .customTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for alternating rows */
+  }
+  
+  .customTable td {
+    padding: 10px; /* Padding for the table cells */
+  }
+  
+  .customTable td button {
+    padding: 5px;
+    margin-right: 5px;
+  }
+  
+  .customThead {
+    text-align: center;
+    font-weight: bold;
+  }
+  
