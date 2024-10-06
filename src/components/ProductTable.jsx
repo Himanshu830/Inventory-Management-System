@@ -1,17 +1,15 @@
 import React from 'react';
-import { Table, Button } from 'react-bootstrap'; // Use Bootstrap's Table and Button
+import { Table, Button } from 'react-bootstrap'; 
 import { useRecoilValue } from 'recoil';
 import { productListState, userRoleState } from '../recoil/atoms';
-import { FaTrash } from 'react-icons/fa'; // Icons from React Icons
+import { FaTrash } from 'react-icons/fa'; 
 import { FaEye } from "react-icons/fa6";
 import { MdOutlineModeEdit } from "react-icons/md";
-import styles from "./style.module.css"; // Import the CSS module
+import styles from "./style.module.css";
 
 const ProductTable = ({ onEdit, onDelete, onDisable }) => {
   const productList = useRecoilValue(productListState);
   const userRole = useRecoilValue(userRoleState);
-
-  console.log("productList", productList)
 
   return (
     <Table striped bordered hover responsive className={styles.customTable}>

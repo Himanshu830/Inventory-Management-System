@@ -25,21 +25,17 @@ const AdminView = () => {
       product.id === updatedProduct.id 
         ? { 
             ...product, 
-            // Ensure price is a string before calling .replace()
             price: parseFloat(String(updatedProduct.price ?? product.price)?.replace(/[^\d.-]/g, '')) || 0,
             quantity: (updatedProduct.quantity ?? product.quantity) || 0, // Update quantity
-            // Calculate total value and format with $
             value: '$' + (
               (parseFloat(String(updatedProduct.price ?? product.price)?.replace(/[^\d.-]/g, '')) || 0) * 
               ((updatedProduct.quantity ?? product.quantity) || 0)
-            ).toFixed(2) // Format the result with 2 decimal places
+            ).toFixed(2)
           }
         : product
     ));
-    setEditProduct(null); // Close the edit form/dialog
+    setEditProduct(null); 
   };
-  
-  
 
   return (
     <div>

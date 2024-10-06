@@ -16,7 +16,6 @@ export const totalStoreValueState = selector({
     const products = get(productListState);
     
     const totalValue = products.reduce((acc, product) => {
-      // Check if the price is a string (with a dollar sign), and convert it to a number
       const price = typeof product.price === 'string' 
         ? parseFloat(product.price.replace('$', '')) 
         : product.price;
@@ -24,7 +23,6 @@ export const totalStoreValueState = selector({
       return acc + (price * product.quantity);
     }, 0);
     
-    // Format the total value with a dollar sign and two decimal places
     return `$${totalValue.toFixed(2)}`;
   },
 });

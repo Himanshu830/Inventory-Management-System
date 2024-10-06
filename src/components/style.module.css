@@ -1,24 +1,24 @@
 .customTable {
-    background-color: #f8f9fa; /* Light gray background for the table */
-    color: #343a40; /* Dark text color */
-    border: 2px solid #ced4da; /* Border color */
+    background-color: #f8f9fa; 
+    color: #343a40;
+    border: 2px solid #ced4da; 
   }
   
   .customTable thead {
-    background-color: #343a40; /* Dark background for the header */
-    color: white; /* White text color for the header */
+    background-color: #343a40; 
+    color: white; 
   }
   
   .customTable tbody tr {
-    background-color: #ffffff; /* Default background for table rows */
+    background-color: #ffffff; 
   }
   
   .customTable tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Light gray for alternating rows */
+    background-color: #f2f2f2; 
   }
   
   .customTable td {
-    padding: 10px; /* Padding for the table cells */
+    padding: 10px;
   }
   
   .customTable td button {

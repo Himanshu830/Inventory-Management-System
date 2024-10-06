@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { useRecoilState,  } from 'recoil'; // Import useSetRecoilState for setting products
-import { Form } from 'react-bootstrap'; // Use Bootstrap's Button
+import { useRecoilState,  } from 'recoil'; 
+import { Form } from 'react-bootstrap'; 
 import AdminView from './components/AdminView';
 import UserView from './components/UserView';
 import { fetchInventory } from './api';
 import { productListState, userRoleState } from './recoil/atoms';
 
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { totalProductsState, totalStoreValueState, outOfStockState, categoryCountState } from './recoil/selectors';
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { RiExchangeDollarLine } from "react-icons/ri";
@@ -15,8 +15,8 @@ import { HiMiniRectangleGroup } from "react-icons/hi2";
 
 
 function App() {
-  const [userRole, setUserRole] = useRecoilState(userRoleState); // Managing userRole with useRecoilState
-  const [products, setProducts] = useRecoilState(productListState); // Use setRecoilState to update product list
+  const [userRole, setUserRole] = useRecoilState(userRoleState); 
+  const [products, setProducts] = useRecoilState(productListState);
 
   const totalProducts = useRecoilState(totalProductsState) 
   const totalStoresValue = useRecoilState(totalStoreValueState) 
@@ -26,12 +26,12 @@ function App() {
   useEffect(() => {
     fetchInventory()
       .then(data => {
-        if (Array.isArray(data)) { // Ensure data is an array
+        if (Array.isArray(data)) {
           const updatedData = data.map((item, index) => ({
             ...item,   
             id: index + 1  
           }));
-          setProducts(updatedData); // Set the updated data in Recoil state
+          setProducts(updatedData); 
           console.log("Fetched Products:", updatedData);
         } else {
           console.error("Fetched data is not an array:", data);
@@ -43,7 +43,7 @@ function App() {
   }, [setProducts]);
 
   const toggleRole = () => {
-    setUserRole(userRole === 'admin' ? 'user' : 'admin'); // Toggle between admin and user
+    setUserRole(userRole === 'admin' ? 'user' : 'admin'); 
   };
 
   return (

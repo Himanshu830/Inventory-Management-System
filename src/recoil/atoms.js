@@ -8,6 +8,6 @@ export const productListState = atom({
 
 export const userRoleState = atom({
   key: 'userRoleState',
-  default: 'user', // Can be 'admin' or 'user'
+  default: 'user',
 });
                 
