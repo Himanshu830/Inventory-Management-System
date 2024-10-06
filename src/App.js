@@ -16,7 +16,7 @@ import { HiMiniRectangleGroup } from "react-icons/hi2";
 
 function App() {
   const [userRole, setUserRole] = useRecoilState(userRoleState); // Managing userRole with useRecoilState
-  const setProducts = useRecoilState(productListState); // Use setRecoilState to update product list
+  const [products, setProducts] = useRecoilState(productListState); // Use setRecoilState to update product list
 
   const totalProducts = useRecoilState(totalProductsState) 
   const totalStoresValue = useRecoilState(totalStoreValueState) 
